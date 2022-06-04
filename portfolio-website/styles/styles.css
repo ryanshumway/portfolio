@@ -225,7 +225,7 @@ li::before {
   -ms-flex-pack: justify;
   justify-content: space-evenly;
   -ms-flex-line-pack: center;
-  align-content: center;
+  align-content: stretch;
   margin: auto;
 }
 
@@ -245,6 +245,8 @@ li::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex: 1;
+  flex-grow: 1;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -410,7 +412,7 @@ li::before {
   .footerContainer {
     margin: 0 12px 0 -32px;
     width: 90%;
-    align-items: center;
+    align-items: stretch;
     flex-direction: row;
   }
 
