@@ -47,6 +47,8 @@ p {
   border-radius: var(--size-MD);
   background-color: var(--color-secondary);
   display: flex;
+  flex: 1;
+  flex-grow: 1;
   flex-direction: column;
   width: 33%;
   gap: var(--size-MD);
