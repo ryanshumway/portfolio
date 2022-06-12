@@ -23,10 +23,14 @@ a:active {
 }
 
 :root {
+
+  --gradient: linear-gradient(90deg, hsla(4, 79%, 63%, 1) 0%, hsla(233, 89%, 60%, 1) 100%);
+
   --color-primary: #1f2324;
   --color-secondary: #282d2e;
   --color-hover: rgb(52, 59, 62);
   --color-highlight: #eb5e55;
+  --color-purple: #5F00BA;
   --color-button: #74b4be;
   --color-button-hover: #78bac4;
   --color-button-click: rgb(107, 169, 179);
@@ -66,20 +70,22 @@ a:active {
     sans-serif;
   font-size: var(--size-XL);
   font-weight: 700;
-  background-color: var(--color-button);
+  background-image: var(--gradient);
+  background-size: 250%;
+  background-position: left;
   color: var(--color-primary);
   margin: var(--size-LG) 0;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .button:hover {
-  transform: scale(1.02);
-  background-color: var(--color-button-hover);
+  transform: scale(1.03);
+  background-position: right;
 }
 
 .button:active {
   transform: scale(1);
-  background-color: var(--color-button-click);
+  background-position: center;
 }
 
 .logo {
