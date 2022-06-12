@@ -5,7 +5,7 @@
 }
 
 .parallaxImage {
-  background-image: url(/src/images/capitalReef.jpg);
+  background-image: url(/public/src/images/capitalReef.jpg);
   min-height: 520px;
   background-attachment: fixed;
   background-position: center;
