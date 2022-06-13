@@ -16,11 +16,11 @@
 }
 
 .parallaxH1 {
-  font-family: 'DM Serif', serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 3em;
   position: absolute;
-  color: var(--color-whitish);
-  top: 37%;
+  color: var(--color-primary);
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

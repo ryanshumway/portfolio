@@ -89,7 +89,7 @@ a:active {
 }
 
 .logo {
-  margin: 56px;
+  margin: 40px;
   width: 180px;
   -webkit-transition: var(--transition-main);
   transition: var(--transition-main);
