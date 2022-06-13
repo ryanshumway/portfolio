@@ -149,9 +149,7 @@ body {
 }
 
 .bulletSubject {
-  border-bottom: var(--color-gray-4) 2px solid;
   padding-bottom: 2px;
-  margin-bottom: var(--size-LG);
 }
 
 .bulletList {
