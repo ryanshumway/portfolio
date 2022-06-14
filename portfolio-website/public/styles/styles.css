@@ -216,7 +216,8 @@ li::before {
   z-index: 600;
   box-sizing: inherit;
   position: relative;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   height: 56px;
   display: flex;
   margin: auto;
@@ -236,6 +237,7 @@ li::before {
 
 .navTab {
   display: flex;
+  max-width: 88px;
   box-sizing: inherit;
   flex: 1 1 0%;
   align-items: center;
@@ -370,22 +372,29 @@ li::before {
 
 @media only screen and (max-width: 768px) {
   /* For mobile: */
+  .header {
+    top: 12px;
+  }
+ 
   .navTab {
-
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    flex: 1;
+    flex-grow: 1;
   }
 
   .footer {
     width: 100%;
     -webkit-transition: var(--transition-main);
     transition: var(--transition-main);
-    padding: var(--size-MD);
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 0;
   }
 
   .footerContainer {
+    justify-content: space-between;
     display: flex;
     height: 100%;
     padding-bottom: 8px;
@@ -399,6 +408,8 @@ li::before {
   .navTabText {
     padding-top: var(--size-SM);
     text-align: center;
+    font-size: 0px;
+    color: transparent;
   }
 
   .mainContentWrapper {
