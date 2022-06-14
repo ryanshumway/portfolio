@@ -198,38 +198,25 @@ li::before {
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
+  display: block;
   position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
   background-color: var(--color-white-transparent);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(10px);
-  width: 100%;
-  text-align: center;
   padding: var(--size-MD) 0;
 }
 
 .footerContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-sizing: inherit;
+  position: relative;
+  justify-content: space-between;
+  height: 100%;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-evenly;
   -ms-flex-line-pack: center;
-  align-content: stretch;
   margin: auto;
 }
 
@@ -246,20 +233,9 @@ li::before {
 }
 
 .navTab {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  flex: 1;
-  flex-grow: 1;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  flex: 1 1 0%;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding: var(--size-LG) var(--size-XL);
   border-radius: var(--size-LG);
@@ -406,7 +382,6 @@ li::before {
     -webkit-transition: var(--transition-main);
     transition: var(--transition-main);
     padding: var(--size-MD);
-    padding-bottom: var(--size-XL);
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -414,8 +389,8 @@ li::before {
   }
 
   .footerContainer {
-    margin: 0 12px 0 -32px;
-    width: 90%;
+    display: flex;
+    height: 100%;
     align-items: stretch;
     flex-direction: row;
   }
@@ -434,8 +409,8 @@ li::before {
     margin: 0 24px;
   }
   .ryanImage {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     -webkit-transition: var(--transition-main);
     transition: var(--transition-main);
   }
