@@ -79,7 +79,7 @@ nav {
   padding: 0 var(--size-2em);
 }
 
-ul {
+.navigationUL {
   display: flex;
   list-style: none;
   list-style-type: none;
