@@ -62,6 +62,36 @@ a:active {
   --transition-main: all 0.2s ease-in-out;
 }
 
+.navigation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 48px 0px;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--size-2em);
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  list-style-type: none;
+  width: 400px;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+li {
+  text-decoration: none;
+}
+
 .button {
   padding: var(--size-LG) var(--size-XL);
   border-radius: var(--size-LG);
