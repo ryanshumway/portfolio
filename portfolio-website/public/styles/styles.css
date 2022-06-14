@@ -198,8 +198,10 @@ li::before {
 }
 
 .footer {
+  z-index: 500;
   display: block;
   position: fixed;
+  box-sizing: inherit;
   bottom: 0;
   left: 0;
   right: 0;
@@ -211,12 +213,12 @@ li::before {
 }
 
 .footerContainer {
+  z-index: 600;
   box-sizing: inherit;
   position: relative;
   justify-content: space-between;
-  height: 100%;
+  height: 56px;
   display: flex;
-  -ms-flex-line-pack: center;
   margin: auto;
 }
 
@@ -234,10 +236,11 @@ li::before {
 
 .navTab {
   display: flex;
+  box-sizing: inherit;
   flex: 1 1 0%;
   align-items: center;
   justify-content: center;
-  padding: var(--size-LG) var(--size-XL);
+  padding: var(--size-MD);
   border-radius: var(--size-LG);
   -webkit-transition: var(--transition-main);
   transition: var(--transition-main);
@@ -368,13 +371,7 @@ li::before {
 @media only screen and (max-width: 768px) {
   /* For mobile: */
   .navTab {
-    min-width: 56px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: var(--size-MD);
-    border-radius: var(--size-MD);
+
   }
 
   .footer {
@@ -391,7 +388,7 @@ li::before {
   .footerContainer {
     display: flex;
     height: 100%;
-    align-items: stretch;
+    padding-bottom: 8px;
     flex-direction: row;
   }
 
@@ -461,6 +458,7 @@ li::before {
     -webkit-transition: var(--transition-main);
     transition: var(--transition-main);
     font-size: 1.5em;
+    width: 140px;
   }
   .bodyText {
     width: 80%;
