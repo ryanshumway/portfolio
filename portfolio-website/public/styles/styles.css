@@ -105,7 +105,8 @@ nav {
   background-image: var(--gradient);
   background-size: 250%;
   background-position: left;
-  color: var(--color-primary);
+  color: white;
+  text-align: center;
   margin: var(--size-LG) 0;
   transition: all 0.15s ease-in-out;
 }
