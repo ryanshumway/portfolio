@@ -12,18 +12,19 @@ function setUpTabs() {
 const footer = document.getElementById('footerID');
 const footerWidth = footer.offsetWidth;
 const navigationLinks = document.getElementById('navigationLinks');
+const logoLink = document.querySelector('.link');
+const width = window.innerWidth;
 
-window.onload = setNavigationVisible();
+window.addEventListener('resize', setNavigationVisible);
+window.onload(setNavigationVisible);
 
 function setNavigationVisible() {
-  if (footerWidth > 451) {
-    console.log("Width is " + footerWidth + "px")
-    footer.style.display = 'none'
-    footer.style.opacity = 'none'
-    navigationLinks.style.display = 'flex'
-  } else if (footerWidth < 450) {
-    footer.style.display = "block"
-    footer.style.opacity = '100%'
-    navigationLinks.style.display = 'none'
+  if (window.innerWidth>500) {
+      footer.style.display = 'none';
+      navigationLinks.style.display = 'flex';
+  } else {
+      logoLink.style.justifyContent = 'center';
+      footer.style.display = "block";
+      navigationLinks.style.display = 'none';
   }
 }
