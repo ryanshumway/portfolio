@@ -25,7 +25,7 @@ export const TextContainer = styled.div`
   overflow-wrap: anywhere;
   word-break: break-word;
   max-width: 100%;
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     margin-left: 0;
   }
 `;
