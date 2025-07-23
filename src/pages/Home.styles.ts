@@ -27,6 +27,7 @@ export const Name = styled.h1`
   font-weight: 700;
   margin: 0 0 0.5rem 0;
   font-family: 'DM Sans', system-ui, sans-serif;
+  color: #111827;
 `;
 
 export const Roles = styled.div`
