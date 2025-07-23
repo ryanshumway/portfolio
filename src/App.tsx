@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import styled from 'styled-components';
@@ -8,10 +8,7 @@ function App() {
     <AppBackground>
       <CenterContainer>
         <Router>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-          </nav>
+          
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -31,13 +28,19 @@ const AppBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 `;
 
 const CenterContainer = styled.div`
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
-  margin-top: 40px;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  box-sizing: border-box;
 `;
