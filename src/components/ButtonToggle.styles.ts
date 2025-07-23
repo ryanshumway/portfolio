@@ -9,6 +9,10 @@ export const ButtonToggleContainer = styled.div`
   padding: 4px;
   border-radius: 999px;
   margin: 16px;
+
+  [data-theme="dark"] & {
+    background-color: ${colors.gray[700]};
+  }
 `;
 
 export const ToggleButton = styled.button<{ $isActive: boolean }>`
@@ -39,5 +43,18 @@ export const ToggleButton = styled.button<{ $isActive: boolean }>`
   
   &:active {
     transform: scale(0.97);
+  }
+
+  [data-theme="dark"] & {
+    background: ${props => props.$isActive ? colors.gray[900] : 'transparent'};
+    color: ${props => props.$isActive ? colors.gray[100] : colors.gray[300]};
+    box-shadow: ${props => props.$isActive ? '0 1px 4px rgba(0,0,0,0.2)' : 'none'};
+
+    &:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      ${props => !props.$isActive && `
+        background: rgba(55, 65, 81, 0.5);
+      `}
+    }
   }
 `; 

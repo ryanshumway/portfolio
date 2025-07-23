@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { colors } from '../styles/colors';
 
 export const AccordionContainer = styled(motion.div)`
   border-radius: 16px;
@@ -28,9 +29,13 @@ export const AccordionContainer = styled(motion.div)`
 export const ImageContainer = styled.div`
   width: 100%;
   height: 200px;
-  background-color: #9CA3AF;
+  background-color: ${colors.gray[400]};
   border-radius: 12px;
   margin-bottom: 16px;
+
+  [data-theme="dark"] & {
+    background-color: ${colors.gray[600]};
+  }
 `;
 
 export const AccordionHeader = styled.div`
@@ -52,16 +57,24 @@ export const CompanyInfo = styled.div`
 export const CompanyName = styled.h3`
   font-size: 1.125rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: ${colors.gray[900]};
   margin: 0;
   line-height: 1.4;
+
+  [data-theme="dark"] & {
+    color: ${colors.gray[100]};
+  }
 `;
 
 export const TimeInfo = styled.div`
   font-size: 0.875rem;
-  color: #666666;
+  color: ${colors.gray[600]};
   font-weight: 500;
   line-height: 1.4;
+
+  [data-theme="dark"] & {
+    color: ${colors.gray[400]};
+  }
 `;
 
 
@@ -74,10 +87,14 @@ export const AccordionContent = styled.div`
 
 export const Description = styled.p`
   font-size: 0.9rem;
-  color: #4a4a4a;
+  color: ${colors.gray[700]};
   line-height: 1.6;
   font-weight: 400;
   margin: 0;
+
+  [data-theme="dark"] & {
+    color: ${colors.gray[300]};
+  }
 `;
 
  
