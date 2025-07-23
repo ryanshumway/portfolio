@@ -5,7 +5,6 @@ export const HeaderContainer = styled.header`
   flex-direction: row;
   align-items: center;
   padding: 64px;
-  background-color: red;
   width: 100%;
   box-sizing: border-box;
 
