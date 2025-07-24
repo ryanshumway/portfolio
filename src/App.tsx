@@ -39,7 +39,7 @@ const AppBackground = styled.div`
   box-sizing: border-box;
 
   [data-theme="dark"] & {
-    background: ${colors.gray[900]};
+    background: ${colors.gray[950]};
   }
 `;
 

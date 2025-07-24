@@ -11,7 +11,7 @@ export const ButtonToggleContainer = styled.div`
   margin: 16px;
 
   [data-theme="dark"] & {
-    background-color: ${colors.gray[700]};
+    background-color: ${colors.gray[900]};
   }
 `;
 
@@ -46,7 +46,7 @@ export const ToggleButton = styled.button<{ $isActive: boolean }>`
   }
 
   [data-theme="dark"] & {
-    background: ${props => props.$isActive ? colors.gray[900] : 'transparent'};
+    background: ${props => props.$isActive ? colors.gray[800] : 'transparent'};
     color: ${props => props.$isActive ? colors.gray[100] : colors.gray[300]};
     box-shadow: ${props => props.$isActive ? '0 1px 4px rgba(0,0,0,0.2)' : 'none'};
 

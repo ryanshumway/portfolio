@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useTheme } from '../hooks/useTheme';
+import { colors } from '../styles/colors';
 import {
   AccordionContainer,
   ImageContainer,
@@ -22,6 +24,14 @@ interface ExperienceAccordionProps {
 
 const ExperienceAccordion: React.FC<ExperienceAccordionProps> = ({ experience }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { isDarkMode } = useTheme();
+
+  const getHoverBackgroundColor = () => {
+    if (isDarkMode) {
+      return isHovered ? colors.gray[900] : 'transparent';
+    }
+    return isHovered ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.5)';
+  };
 
   return (
     <AccordionContainer
@@ -29,7 +39,7 @@ const ExperienceAccordion: React.FC<ExperienceAccordionProps> = ({ experience })
       onMouseLeave={() => setIsHovered(false)}
       animate={{ 
         scale: isHovered ? 1.02 : 1,
-        backgroundColor: isHovered ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
+        backgroundColor: getHoverBackgroundColor(),
       }}
       transition={{ duration: 0.2, ease: 'easeInOut' }}
     >
